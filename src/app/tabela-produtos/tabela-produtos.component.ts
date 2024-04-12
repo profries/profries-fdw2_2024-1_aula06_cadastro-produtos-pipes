@@ -10,6 +10,7 @@ import { ProdutoService } from '../produto.service';
 export class TabelaProdutosComponent {
   @Input() title= "Tabela de Produtos";
   listaProdutos: Produto[] = [];
+  nomePesquisado= "";
 
   constructor(private produtoService: ProdutoService) {
     this.listaProdutos = this.produtoService.listar();
